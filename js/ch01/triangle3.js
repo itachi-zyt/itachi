@@ -26,12 +26,12 @@ window.onload = function init(){
                                      1.0, 1.0, 0.0, 1.0,
                                      1.0, 1.0, 0.0, 1.0,
                                      1.0, 1.0, 0.0, 1.0,
-                                     1.0, 0.0, 1.0, 0.0,
-                                     1.0, 0.0, 1.0, 0.0,
-                                     1.0, 0.0, 1.0, 0.0,
-                                     1.0, 0.0, 1.0, 0.0,
-                                     1.0, 0.0, 1.0, 0.0,
-                                     1.0, 0.0, 1.0, 0.0
+                                     1.0, 0.0, 1.0, 1.0,
+                                     1.0, 0.0, 1.0, 1.0,
+                                     1.0, 0.0, 1.0, 1.0,
+                                     1.0, 0.0, 1.0, 1.0,
+                                     1.0, 0.0, 1.0, 1.0,
+                                     1.0, 0.0, 1.0, 1.0
                 ];
 	// Configure WebGL
 	gl.viewport( 0, 0, canvas.width, canvas.height );
@@ -57,7 +57,7 @@ window.onload = function init(){
 	gl.bufferData( gl.ARRAY_BUFFER, new Float32Array( colors ), gl.STATIC_DRAW );
 
                 var vColor = gl.getAttribLocation( program, "vColor" );
-	gl.vertexAttribPointer( vColor, 2, gl.FLOAT, false, 0, 0 );
+	gl.vertexAttribPointer( vColor, 4, gl.FLOAT, false, 0, 0 );
 	gl.enableVertexAttribArray( vColor );
 
 	render();
