@@ -6,5 +6,5 @@
   
 * ## [实验1](https://itachi-zyt.github.io/demos/%E4%BB%BB%E5%8A%A1b.html)  
 
-* ## [实验1](https://itachi-zyt.github.io/demos/%E4%BB%BB%E5%8A%A1c.html) 
+
   
