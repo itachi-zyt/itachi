@@ -8,8 +8,8 @@
 
 * ## [实验2](https://itachi-zyt.github.io/201812213501021/index.html)    
 
-* ## [实验3]
-
+* ## [实验3](https://itachi-zyt.github.io/201812213501021/index.html)   
+ 
 * ## [实验4] 
 
 * ## [实验5] 
@@ -18,4 +18,4 @@
 
 * ## [实验7] 
 
-* ## [课程设计] (https://itachi-zyt.github.io/201812213501021/index.html)
+* ## [课程设计](https://itachi-zyt.github.io/201812213501021/index.html)
