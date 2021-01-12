@@ -16,6 +16,6 @@
 
 * ## [实验6]() 
 
-* ## [实验7]() 
+* ## [实验7](https://itachi-zyt.github.io/课程设计/index.html) 
 
 
