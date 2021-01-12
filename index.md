@@ -18,4 +18,4 @@
 
 * ## [实验7]() 
 
-* ## [课程设计](https://itachi-zyt.github.io/201812213501021/index.html)
+* ## [课程设计](https://itachi-zyt.github.io/课程设计/index.html)
