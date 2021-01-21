@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+	<title>Chap4 Demo</title>
+	<script id="vertex-shader" type="x-shader/x-vertex">
+	attribute vec4 vPosition;
+	attribute vec4 vColor;
+	varying vec4 fColor;
+    uniform vec3 pos;
+	uniform vec3 typ;
+	uniform vec3 theta;
+
+	void main()
+	{
+		//compute the sins and cos of theta for each of the three axis in one computation
+		vec3 angles = radians( theta );
+		vec3 cost = cos( theta );
+		vec3 sint = sin( theta );
+		
+		mat4 p=mat4(  1.0,0.0,0.0,0.0,
+		             0.0,1.0,0.0,0.0,
+					 0.0,0.0,1.0,0.0,
+					 pos.x,pos.y,pos.z,1.0
+					 );
+
+        mat4 t=mat4( typ.x,0.0,0.0,0.0,
+		             0.0,typ.y,0.0,0.0,
+					 0.0,0.0,typ.z,0.0,
+					 0.0,0.0,0.0,1.0);
+		
+		
+		mat4 rx = mat4(  1.0,  0.0,  0.0, 0.0,
+						 0.0,  cost.x,  sint.x, 0.0,
+						 0.0,  -sint.x,  cost.x, 0.0,
+						 0.0,  0.0,  0.0, 1.0
+						 );
+
+		mat4 ry = mat4(  cost.y,  0.0, -sint.y,  0.0,
+						 0.0,  1.0,  0.0,  0.0,
+						 sint.y,  0.0,  cost.y,  0.0,
+						 0.0,  0.0,  0.0,  1.0
+						 );
+
+		mat4 rz = mat4(  cost.z,  sint.z,  0.0,  0.0,
+						 -sint.z,  cost.z,  0.0,  0.0,
+						 0.0,  0.0,  1.0,  0.0,
+						 0.0,  0.0,  0.0,  1.0
+						 );
+
+		fColor = vColor;
+		gl_Position = t * p * rz * ry * rx * vPosition;
+		gl_Position.z = -gl_Position.z;
+	}
+	</script>
+
+	<script id="fragment-shader" type="x-shader/x-fragment">
+	precision mediump float;
+	varying vec4 fColor;
+
+	void main()
+	{
+		gl_FragColor = fColor;
+	}
+	</script>
+	<script type="text/javascript" src="./js/common/webgl-utils.js"></script>
+	<script type="text/javascript" src="./js/common/initShaders.js"></script>
+	<script type="text/javascript" src="./js/common/gl-matrix-min.js"></script>
+	
+	<script type="text/javascript" src="./js/rotcubev.js"></script>
+</head>
+<body>
+<h1>旋转的立方体-元素数组</h1>
+<canvas id="gl-canvas" width="512" height="512">
+你的浏览器不支持HTML5 canvas元素
+</canvas>
+
+<button id="xbutton">绕X轴旋转</button>
+<button id="ybutton">绕Y轴旋转</button>
+<button id="zbutton">绕Z轴旋转</button>
+        <p>沿X轴平移</p>
+        <input type="range" id="posX" min="-1" max="1" step="0.1" onchange="positionMove()">
+		<p>沿Y轴平移</p>
+		<input type="range" id="posY" min="-1" max="1" step="0.1" onchange="positionMove()">
+		<p>沿Z轴平移</p>
+		<input type="range" id="posZ" min="-1" max="1" step="0.1" onchange="positionMove()">		
+		<p>沿X轴缩放&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;沿Y轴缩放&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;沿Z轴缩放</p>
+		<input type="range" id="typeX" min="0" max="2" step="0.1" defaultValue="1" onchange="typeChange()">
+		<input type="range" id="typeY" min="0" max="2" step="0.1" defaultValue="1" onchange="typeChange()">
+		<input type="range" id="typeZ" min="0" max="2" step="0.1" defaultValue="1" onchange="typeChange()">
+</body>
+</html>
