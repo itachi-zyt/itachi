@@ -8,7 +8,7 @@
 
 * ## [实验2](https://itachi-zyt.github.io/201812213501021/index.html)    
 
-* ## [实验3](https://itachi-zyt.github.io/201812213501021/index.html)   
+* ## [实验3](https://itachi-zyt.github.io/201812213501021-3/任务a.html)   
  
 * ## [实验4](https://itachi-zyt.github.io/201812213501021-lab4/index.html)
 
