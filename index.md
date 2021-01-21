@@ -12,7 +12,7 @@
  
 * ## [实验4](https://itachi-zyt.github.io/201812213501021-lab4/index.html)
 
-* ## [实验5]() 
+* ## [实验5](https://itachi-zyt.github.io/201812213501021-lab5/lab5/lab5.html) 
 
 * ## [实验6]() 
 
