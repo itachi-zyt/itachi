@@ -14,8 +14,8 @@
 
 * ## [实验5](https://itachi-zyt.github.io/201812213501021-lab5/lab5/lab5.html) 
 
-* ## [实验6]() 
+* ## [实验6](https://itachi-zyt.github.io/201812213501021-6/index.html) 
 
-* ## [实验7](https://itachi-zyt.github.io/课程设计/index.html) 
+* ## [实验7](https://itachi-zyt.github.io/201812213501021-7/index.html) 
 
 
